@@ -1,0 +1,93 @@
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        border: none;
+        color: black;
+      }
+    </style>
+    <script>
+      // --- Speech Synthesis ---
+
+      var msg;
+
+      function as2js(e) {
+        msg = new SpeechSynthesisUtterance(e);
+        jubaospeak();
+      }
+
+      function jubaospeak() {
+        window.speechSynthesis.speak(msg);
+      }
+
+      // --- Speech recognition ---
+
+      var diagnostic = document.querySelector(".output");
+      var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+      var recognition = new SpeechRecognition();
+
+      recognition.continuous = false;
+      recognition.interimResults = false;
+      recognition.lang = "en-US";
+      // recognition.maxAlternatives = 1;
+
+      function send2as(i, e) {
+        var a = document.getElementById("cvpanel");
+        a.js2as(i, e);
+        console.log(e);
+      }
+
+      function startmic() {
+        recognition.start();
+        window.speechSynthesis.cancel();
+        console.log("start recognition");
+      }
+
+      function stopmic() {
+        recognition.stop();
+        console.log("stop recognition");
+      }
+
+      recognition.onresult = function (event) {
+        var last = event.results[event.resultIndex];
+        var str = last[0].transcript;
+        send2as(1, capitalize(str));
+      };
+
+      recognition.onsoundstart = function () {
+        console.log("Some sound is being received");
+        send2as(0, null);
+      };
+
+      recognition.onaudiostart = function () {
+        console.log("Audio capturing started");
+      };
+
+      recognition.onend = function () {
+        console.log("Speech recognition service disconnected");
+      };
+
+      // Capitalize first letter
+
+      function capitalize(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+      }
+    </script>
+  </head>
+
+  <body>
+    <object
+      id="cvpanel"
+      name="cvpanel"
+      width="100%"
+      height="100%"
+      type="application/x-shockwave-flash"
+      data="aiui.swf"
+    >
+      <param value="display-ui.swf" name="movie" />
+      <param name="allowscriptaccess" value="always" />
+    </object>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+{
+  "genericresponse": "This is a generic response",
+  "welcomemessage": "Hello! How can I help you?",
+  "responses": [{
+      "userinput": ["Show me top rated movies", "Movies", "Show movies", "Action movies", "New movies"],
+      "response": "Ok, here are the highest rated movies of all time.",
+      "suggestions": ["Movie 1", "Movie 2", "Movie 3", "Movie 4", "Movie 5"],
+      "resulttype": "movie_cluster_16:9"
+    },
+    {
+      "userinput": ["Tell me a joke"],
+      "response": "I invited my girlfriend to go to the gym but she stood me up, the two of us aren't going to work out.",
+      "suggestions": ["Joke 1", "Joke 2", "Joke 3", "Joke 4", "Joke 5"],
+      "resulttype": "single_string"
+    },
+    {
+      "userinput": ["Hello", "How are you", "Hey", "What's up"],
+      "response": "Hello there, how is your day going so far?",
+      "suggestions": ["Hello 1", "Hello 2", "Hello 3", "Hello 4", "Hello 5", "Hello 6"],
+      "resulttype": "single_string"
+    },
+    {
+      "userinput": ["Flights from Beijing to Shanghai leaving this week", "Show flights"],
+      "response": "Ok, here are 10 flights from Beijing to Shanghai leaving this week.",
+      "suggestions": ["Flight 1", "Flight 2", "Flight 3", "Flight 4"],
+      "resulttype": "tickets_single_row_16:9"
+    },
+    {
+      "userinput": ["1"],
+      "response": "Here are the details for China Airlines flight #C10062",
+      "suggestions": ["Ticket 1", "Ticket 2", "Ticket 3", "Ticket 4", "Ticket 5"],
+      "resulttype": "ticket_detail"
+    },
+    {
+      "userinput": ["Show movies playing in theaters near me", "Movies in theaters"],
+      "response": "Here are movies playing in Shadong theatres near you.",
+      "suggestions": ["Shadong 1", "Shadong 2", "Shadong 3", "Shadong 4", "Shadong 5", "Shadong 6"],
+      "resulttype": "movie_single_row_2:3"
+    },
+    {
+      "userinput": ["2", "Tomb Raider"],
+      "response": "Here are the details for Tomb Raider.",
+      "suggestions": ["Tomb Raider 1", "Tomb Raider 2"],
+      "resulttype": "movie_detail"
+    }
+  ]
+}
