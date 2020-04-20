@@ -1,5 +1,7 @@
 // Adobe Animate Code //
 
+// needs to be compiled to swf together with graphics //
+
 import flash.external.ExternalInterface;
 import flash.events.KeyboardEvent;
 import fl.transitions.Tween;
