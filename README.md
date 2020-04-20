@@ -1,6 +1,6 @@
-# voice-synthesis-and-speech-recognition
+# Voice Synthesis & Speech Recognition Prototype
 
-Sample of prototype created to simulate voice interaction with a display interface.
+This is a sample of a prototype created to simulate voice interactions in a display interface.
 
 The prototype combined voice recognition and speech synthesis with a simulated visual interface with multiple animations.
 
