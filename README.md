@@ -11,6 +11,6 @@ The recognition and syntesis was done on the HTML side with [Web Speech API](htt
 
 ![Image of description](readmeimg/description2.gif)
 
-Animations respond dynamically to input and output speech strings.
+Animations respond dynamically to real-time input and output speech strings.
 
 ![Image of description](readmeimg/description3.gif)
